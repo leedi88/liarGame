@@ -28,6 +28,7 @@ class MyHomePage extends StatelessWidget {
   late HomeViewModel _viewModel;
 
   MyHomePage({super.key});
+
   @override
   Widget build(BuildContext context) {
     _viewModel = Provider.of<HomeViewModel>(context);

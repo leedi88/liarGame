@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class ChangeMemberCountWidget extends StatefulWidget {
+class ChangeMemberCountWidget extends StatelessWidget {
   const ChangeMemberCountWidget({
     Key? key,
     required this.onPressedPlus,
@@ -13,23 +13,17 @@ class ChangeMemberCountWidget extends StatefulWidget {
   final VoidCallback onPressedMinus;
 
   @override
-  State<ChangeMemberCountWidget> createState() =>
-      _ChangeMemberCountWidgetState();
-}
-
-class _ChangeMemberCountWidgetState extends State<ChangeMemberCountWidget> {
-  @override
   Widget build(BuildContext context) {
     return Column(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         IconButton(
-          onPressed: widget.onPressedPlus,
+          onPressed: onPressedPlus,
           icon: const Icon(Icons.arrow_upward),
         ),
-        Text(widget.desc),
+        Text(desc),
         IconButton(
-          onPressed: widget.onPressedMinus,
+          onPressed: onPressedMinus,
           icon: const Icon(Icons.arrow_downward),
         ),
       ],
